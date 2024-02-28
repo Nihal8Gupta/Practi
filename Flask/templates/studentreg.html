@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Student Registration form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+      <style>  
+            *{
+                color: black;
+            }
+            h1{color:yellowgreen;}
+            form{background-color:aquamarine;
+                 
+                 margin:0px 250px;} 
+            .a{color:white; height:900px;}
+            .b{color:white;}
+             
+      </style>
+
+</head>
+
+ <body><h1 align=center><u>STUDENT REGISTRATION FORM</u></h1>
+ <form method="post" onsubmit="" action="">
+ <table class="a">
+       <tr>
+       <td><label>FIRST NAME</label></td>
+       <td><input type="text" maxlength="30"/>(max 30 characters a-z and A-Z)</td>
+       </tr>
+       <tr>
+       <td><label>LAST NAME</label></td>
+       <td><input type="text" maxlength="30"/>(max 30 characters a-z and A-Z)</td>
+       </tr>
+       <tr>
+       <td><label>DATE OF BIRTH</label></td>
+       <td><input type="date"/></td>
+       </tr>
+       <tr>
+           <td><label>EMAIL ID</label></td>
+           <td><input type="email"/></td>
+       </tr>
+       <tr>
+           <td><label>MOBILE NUMBER</label></td>
+           <td><input type="number"/>(10 digit number)</td>
+       </tr>
+        <tr>
+           <td><label>GENDER</label></td>
+           <td><input type="radio" name="g">Male</input>
+               <input type="radio"name="g">Female</input></td>
+       </tr>
+        <tr>
+           <td><label>ADDRESS</label></td>
+           <td><textarea rows="4" cols="30"></textarea></td>
+       </tr>
+        <tr>
+           <td><label>CITY</label></td>
+           <td><input type="text"/>(max 30 characters a-z and A-Z)</td>
+       </tr>
+        <tr>
+           <td><label>PIN CODE</label></td>
+           <td><input type="number"/>(6 digit number)</td>
+       </tr>
+        <tr>
+           <td><label>STATE</label></td>
+           <td><input type="text" maxlenght="30"/>(max 30 characters a-z and A-Z)</td>
+       </tr>
+        <tr>
+           <td><label>COUNTRY</label></td>
+           <td><select>
+                <option>..select..</option>
+                <option>India</option>
+                <option>UK</option>
+                <option>china</option>
+               </select></td>       
+       </tr>
+        <tr>
+           <td><label>HOBBIES</label></td>
+           <td><input type="checkbox">Drawing</input>
+               <input type="checkbox">Singing</input>
+               <input type="checkbox">Dancing</input>
+               <input type="checkbox">Sketching</input>
+                <br>         
+               <input type="checkbox">Others</input>
+               <input type="text"/>
+           </td>
+       </tr>
+        <tr>
+           <td><label>QUALIFICATION</label></td>
+           <td><table border=1 class="b">
+                      <tr><th>SL.No.Examination</th>
+                          <th>Board</th>
+                          <th>Percentage</th>
+                          <th>Year of Passing</th>
+                      </tr>
+                      <tr><th>1 Class X</th>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                      </tr> 
+                       <tr><th>2 Class XII</th>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                      </tr>
+                       <tr><th>3 Graduation</th>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                      </tr> 
+                      <tr><th>4 Master</th>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                          <td><input type="text"/></td>
+                      </tr>
+                       <tr><th></th>
+                          <td>(10 char max)</td>
+                          <td>(upto 2 decimal)</td>                         
+                      </tr>   
+               </table class="t2"></td>
+        </tr>
+        <tr>
+        <td><label>COURSE APPLIED FOR</label></td>
+        <td><input type="radio" name="c">BCA</input>
+            <input type="radio" name="c">B.com</input>
+            <input type="radio" name="c">B.Sc</input>
+            <input type="radio" name="c">B.A</input>
+        </td>
+        </tr>
+        <tr>
+             <td colspan="2" align=center>
+                 <button type="submit" class="btn btn-success">Submit</button>
+                 <button type="reset" class="btn btn-primary">Reset</button></td>
+        </tr>
+ </table>
+        
+ </form>
+ <br>
+ <div class="col-5 m-auto">
+    <a href="{{url_for('home')}}" class="btn btn-lg btn-warning form-control">Back</a>
+</div>
+ </body>
+</html>
